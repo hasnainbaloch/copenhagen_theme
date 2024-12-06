@@ -6,6 +6,42 @@
   "default_locale": "en-us",
   "settings": [
     {
+      "label": "featured_videos_group_label",
+      "variables": [
+        {
+          "identifier": "enable_featured_videos",
+          "type": "checkbox",
+          "label": "Enable Featured Videos",
+          "description": "Toggle to enable or disable the Featured Videos section",
+          "value": false
+        },
+        {
+          "identifier": "featured_videos",
+          "type": "list",
+          "label": "Featured Videos",
+          "description": "Add featured videos to display on the home page.",
+          "item": {
+            "type": "list",
+            "name": "video",
+            "label": "Video",
+            "settings": [
+              {
+                "type": "text",
+                "name": "title",
+                "label": "Video Title"
+              },
+              {
+                "type": "text",
+                "name": "video_id",
+                "label": "YouTube Video ID"
+              }
+            ]
+          }
+        }
+      ]
+    },    
+    {
+      
       "label": "colors_group_label",
       "variables": [
         {
