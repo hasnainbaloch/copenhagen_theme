@@ -258,17 +258,6 @@
       ]
     },
     {
-      "label": "videos_group_label",
-      "variables": [
-        {
-          "identifier": "homepage_videos",
-          "type": "file",
-          "description": "homepage_videos_description",
-          "label": "homepage_videos_label"
-        }
-      ]
-    },
-    {
       "label": "search_group_label",
       "variables": [
         {
