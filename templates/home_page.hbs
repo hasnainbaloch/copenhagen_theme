@@ -41,35 +41,6 @@
       {{pagination}}
     </section>
 
-    {{#if enable_featured_videos}}
-    <section class="featured-videos">
-      <h2>{{t 'featured_videos'}}</h2>
-      <ul class="video-list">
-        {{#if featured_videos}}
-          {{#each featured_videos}}
-            <li class="video-card">
-              <div class="video-wrapper">
-                <iframe
-                  class="responsive-video"
-                  src="https://www.youtube.com/embed/{{video_id}}"
-                  title="{{title}}"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
-              <p class="video-title">{{title}}</p>
-            </li>
-          {{/each}}
-        {{else}}
-          <p>{{t 'no_videos_available'}}</p>
-        {{/if}}
-      </ul>
-    </section>
-    {{/if}}
-
-
-
     {{#if promoted_articles}}
       <section class="articles">
         <h2>{{t 'promoted_articles'}}</h2>
