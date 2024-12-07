@@ -2,16 +2,24 @@
 
 <section id="main-content" class="section hero">
   <div class="hero-inner">
-    <h2 class="visibility-hidden">{{ t 'search' }}</h2>
-    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
-      <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
-      <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
-    </svg>
+		<h2 class="hero-heading">Welcome to InterWiz help</h2>
+    <br/>
+    <p class="hero-sub-title">Find articles and discussions to help answer your InterWiz questions</p>
+    <div class="hero-search-section">
+      <h2 class="visibility-hidden">{{ t 'search' }}</h2>
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
+        <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
+        <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
+      </svg>
     {{search submit=false instant=settings.instant_search class='search search-full'}}
+  </div>
   </div>
 </section>
 
+
+
 <div class="container">
+
   <section class="section knowledge-base">
     <h2 class="visibility-hidden">{{ t 'categories' }}</h2>
     <section class="categories blocks">
@@ -19,10 +27,38 @@
         {{#each categories}}
           {{#if ../has_multiple_categories}}
             <li class="blocks-item">
-              <a href='{{url}}' class="blocks-item-link">
+              <a href='{{url}}' class="blocks-item-link ">
+								<span class="knowledge-base-link">
+                  <svg width="34" height="29" viewBox="0 0 34 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.3443 15.8411C19.4326 17.8247 21.6313 21.052 22.8079 23.7673C23.3131 24.9324 24.9551 24.9324 25.4602 23.7673C26.6369 21.052 28.8375 17.8247 32.9239 15.8411C34.0372 15.3009 34.0372 13.6943 32.9239 13.154C28.8356 11.1705 26.6369 7.94316 25.4602 5.22786C24.9551 4.06272 23.3131 4.06272 22.8079 5.22786C21.6313 7.94316 19.4307 11.1705 15.3443 13.154C14.231 13.6943 14.231 15.3009 15.3443 15.8411Z" fill="url(#paint0_linear_4264_3487)"/>
+<path d="M25.6188 16.3668C23.5845 17.3546 21.885 18.564 20.4667 19.8864C17.9234 22.249 16.2852 24.9683 15.2334 27.3933C14.5322 29.014 12.2483 29.014 11.5452 27.3933C9.90901 23.6157 6.84865 19.1265 1.16175 16.3668C-0.387248 15.6149 -0.387248 13.3814 1.16175 12.6295C6.84865 9.86984 9.90702 5.38062 11.5432 1.60299C12.2464 -0.0177274 14.5302 -0.0177274 15.2314 1.60299C16.2833 4.02801 17.9214 6.74734 20.4647 9.10988C21.883 10.4323 23.5825 11.6417 25.6168 12.6295C27.1638 13.3814 27.1638 15.6149 25.6168 16.3668H25.6188Z" fill="url(#paint1_linear_4264_3487)"/>
+<path d="M25.6187 16.3409C23.5844 17.3287 21.8849 18.5382 20.4666 19.8605C19.2247 18.3346 17.5628 16.8912 15.3443 15.8148C14.231 15.2766 14.231 13.67 15.3443 13.1297C17.5628 12.0533 19.2247 10.612 20.4666 9.08398C21.8849 10.4064 23.5844 11.6158 25.6187 12.6036C27.1657 13.3555 27.1657 15.589 25.6187 16.3409Z" fill="url(#paint2_linear_4264_3487)" style="mix-blend-mode:difference"/>
+<defs>
+<linearGradient id="paint0_linear_4264_3487" x1="28.2419" y1="22.7057" x2="19.8057" y2="6.41731" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B52E0F"/>
+<stop offset="0.79" stop-color="#EC8E13"/>
+<stop offset="1" stop-color="#FCA915"/>
+</linearGradient>
+<linearGradient id="paint1_linear_4264_3487" x1="20.5242" y1="23.152" x2="5.95815" y2="6.09353" gradientUnits="userSpaceOnUse">
+<stop stop-color="#4EC7EF"/>
+<stop offset="0.13" stop-color="#4CC0EB"/>
+<stop offset="0.31" stop-color="#46AFDF"/>
+<stop offset="0.52" stop-color="#3D93CD"/>
+<stop offset="0.74" stop-color="#306DB4"/>
+<stop offset="0.89" stop-color="#274FA1"/>
+</linearGradient>
+<linearGradient id="paint2_linear_4264_3487" x1="23.6973" y1="18.0705" x2="17.7031" y2="11.05" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6D8CDD"/>
+<stop offset="0.531478" stop-color="#963BCD"/>
+<stop offset="1" stop-color="#B401BF"/>
+</linearGradient>
+</defs>
+</svg>
+
                 <span class="blocks-item-title">{{name}}</span>
                 <span class="blocks-item-description">{{excerpt description}}</span>
-              </a>
+              </span>
+                  </a>
             </li>
           {{else}}
             {{#each sections}}
@@ -41,9 +77,29 @@
       {{pagination}}
     </section>
 
+
+
+
+
+  <section class="section featured-videos">
+    <h2 class="featured-videos-title">Featured Videos</h2>
+    <div class="video-grid">
+      <div class="video-card">
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/VHGbbEPUkQY" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-card">
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/VHGbbEPUkQY" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-card">
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/VHGbbEPUkQY" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
     {{#if promoted_articles}}
       <section class="articles">
-        <h2>{{t 'promoted_articles'}}</h2>
+<!--         <h2>{{t 'promoted_articles'}}</h2> -->
+        <h2>Articles</h2>
         <ul class="article-list promoted-articles">
           {{#each promoted_articles}}
             <li class="promoted-articles-item">
@@ -63,13 +119,9 @@
       </section>
     {{/if}}
   </section>
+  
 
-<section class="section">
-  <iframe src="https://youtu.be/OOISdmwquaI" frameborder="0" allowfullscreen></iframe>
-  <p>Random Video</p>
-</section>
-
-  {{#if help_center.community_enabled}}
+<!--    {{#if help_center.community_enabled}}
     <section class="section home-section community">
       <h2>{{t 'community'}}</h2>
       {{#link 'community' class='community-link'}}
@@ -78,9 +130,9 @@
 
       <div class="community-image"></div>
     </section>
-  {{/if}}
+  {{/if}}  -->
 
-  <section class="section home-section activity">
+  <section class="section home-section">
     {{#if settings.show_recent_activity}}
       {{recent_activity}}
     {{/if}}
